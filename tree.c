@@ -74,6 +74,12 @@ const u_short ifmt[]={ FILE_ARCHIVED, FILE_DIRECTORY, FILE_SYSTEM, FILE_HIDDEN, 
   #endif
 #endif
 
+/* Finder-like sort comparator (macOS only) */
+#ifdef __APPLE__
+/* Provided by mac_finder_sort.c */
+int findersort(struct _info **, struct _info **);
+#endif
+
 struct sorts {
   char *name;
   int (*cmpfunc)(struct _info **, struct _info **);
@@ -81,6 +87,9 @@ struct sorts {
   {"name", alnumsort},
   {"version", versort},
   {"size", fsizesort},
+  #ifdef __APPLE__
+ {"finder", findersort},
+ #endif
   {"mtime", mtimesort},
   {"ctime", ctimesort},
   {"none", NULL},
