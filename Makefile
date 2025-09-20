@@ -22,7 +22,7 @@ PREFIX=/usr/local
 CC ?= gcc
 INSTALL ?= install
 
-VERSION=2.2.1
+VERSION=2.2.1-mac
 TREE_DEST=tree-mac
 DESTDIR=${PREFIX}/bin
 MAN=tree.1
