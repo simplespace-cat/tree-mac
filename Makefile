@@ -70,7 +70,8 @@ CPPFLAGS+=-DLARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
 #CC = cc
 #CFLAGS?=-O2
 #CFLAGS+=-Wall -fomit-frame-pointer -no-cpp-precomp
-#LDFLAGS+=
+#LDFLAGS+= -framework CoreFoundation # <-- MODIFIED: Added CoreFoundation link
+#OBJS+=mac_finder_sort.o              # <-- ADDED: Compile the new sort file
 #MANDIR=${PREFIX}/share/man
 
 # Uncomment for HP/UX:
