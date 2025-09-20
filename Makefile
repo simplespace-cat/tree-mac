@@ -23,7 +23,7 @@ CC ?= gcc
 INSTALL ?= install
 
 VERSION=2.2.1
-TREE_DEST=tree
+TREE_DEST=tree-mac
 DESTDIR=${PREFIX}/bin
 MAN=tree.1
 # Probably needs to be ${PREFIX}/share/man for most systems now
